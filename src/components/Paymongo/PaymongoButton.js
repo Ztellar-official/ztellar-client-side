@@ -23,7 +23,7 @@ const Button = styled.button`
   }
 `
 
-const PaymongoButton = ({price,courseId,ownerId,type,regType}) => {
+const PaymongoButton = () => {
     const cookies = new Cookies(null, { path: '/' });
     const token = cookies.get('token');
     const [state, setState] = useState('');
@@ -37,8 +37,6 @@ const PaymongoButton = ({price,courseId,ownerId,type,regType}) => {
       const res =  await axios({
         method:"POST",
         url:"/paymongo/create-checkout-session",
-        data:{},
-        include:{withCredentials:true}
       })
       setState('success')
       // RETRIEVE CHECKOUT
