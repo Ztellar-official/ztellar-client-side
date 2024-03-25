@@ -37,7 +37,7 @@ const PaymongoButton = ({price,courseId,ownerId,type,regType}) => {
       const res =  await axios({
         method:"POST",
         url:"/paymongo/create-checkout-session",
-        data:{price,courseId,ownerId,type,regType,token},
+        data:{},
         include:{withCredentials:true}
       })
       setState('success')
