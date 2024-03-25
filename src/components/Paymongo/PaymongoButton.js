@@ -42,12 +42,14 @@ const PaymongoButton = ({price,courseId,ownerId,type,regType}) => {
       })
       setState('success')
       // RETRIEVE CHECKOUT
-      const checkoutId = res.data.id;
-      const checkoutUrl = res.data.attributes.checkout_url;
+      // const checkoutId = res.data.id;
+      // const checkoutUrl = res.data.attributes.checkout_url;
 
-      dispatch(paymongoId(checkoutId))
+      // dispatch(paymongoId(checkoutId))
 
-      window.location.href = checkoutUrl;
+      // window.location.href = checkoutUrl;
+
+      console.log(res)
 
     }catch(err){
       console.log(err)
